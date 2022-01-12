@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img,
+svg,
+video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+main {
+  margin-left: 200px;
+  padding-bottom: 50px;
+}
+.container {
+  padding-top: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+body {
+  background-color: #7aacff;
+}
+
+/* The side navigation menu */
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #9fb0cc;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  overflow: auto;
+  box-shadow: 10px 25px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Sidebar links */
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* Active/current link */
+.sidebar a.active {
+  background-color: #3d5780;
+  color: white;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  background-color: #636e80;
+  color: white;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {
+    float: left;
+  }
+  div.content {
+    margin-left: 0;
+  }
+  main {
+    margin-left: 0;
+  }
+  .container {
+    padding-top: 50px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .second_section .diagram {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+  .second_section .trooper {
+    grid-column: span 1;
+    grid-row: span 1;
+    height: 370px;
+  }
+  .second_section .yoda {
+    grid-column: span 1;
+    grid-row: span 1;
+    height: 460px;
+  }
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 500px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+.splash img {
+  object-fit: cover;
+  object-position: 0 70%;
+  height: 300px;
+
+  box-shadow: 10px 25px 30px rgba(0, 0, 0, 0.3);
+  border-bottom: 5px solid #ffffff;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.first_section {
+  width: min(80%, 800px);
+  margin-inline: auto;
+}
+
+.lightsaber {
+  margin-top: 1.5rem;
+}
+
+.first_section p {
+  background-color: #c7dcff;
+  border: 5px solid #ffffff;
+  border-radius: 8px;
+  box-shadow: 10px 25px 30px rgba(0, 0, 0, 0.3);
+  padding: max(3vh, 1rem) 1.5rem;
+  margin-bottom: 50px;
+}
+
+.second_section {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 30px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  width: min(95%, 70rem);
+  margin-inline: auto;
+}
+
+.diagram {
+  grid-column: 1 / 2;
+  grid-row: span 2;
+}
+.trooper {
+  grid-column: 2 / 3;
+  grid-row: span 1;
+  height: 370px;
+}
+.yoda {
+  grid-column: 2 / 3;
+  grid-row: span 1;
+  height: 370px;
+}
+.diagram {
+  border: 5px solid #ffffff;
+  border-radius: 8px;
+  box-shadow: 10px 25px 30px rgba(0, 0, 0, 0.3);
+}
+.start {
+  border-radius: 8px;
+  box-shadow: 10px 25px 30px rgba(0, 0, 0, 0.3);
+  width: min(70%, 70rem);
+  margin-inline: auto;
+}

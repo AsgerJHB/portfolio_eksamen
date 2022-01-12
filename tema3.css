@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+main {
+  margin-left: 200px;
+  padding-top: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+}
+body {
+  background-color: #7aacff;
+}
+
+/* The side navigation menu */
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #9fb0cc;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  overflow: auto;
+  box-shadow: 10px 25px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Sidebar links */
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* Active/current link */
+.sidebar a.active {
+  background-color: #3d5780;
+  color: white;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  background-color: #636e80;
+  color: white;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {
+    float: left;
+  }
+  div.content {
+    margin-left: 0;
+  }
+  main {
+    margin-left: 0;
+  }
+  .container .intro,
+  .container .img1,
+  .container .img2,
+  .container .text1,
+  .container .img3,
+  .container .text2,
+  .container .text3,
+  .container .img4 {
+    grid-column: span 6;
+  }
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 500px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.container img {
+  border-radius: 8px;
+  box-shadow: 10px 25px 30px rgba(0, 0, 0, 0.3);
+  margin-top: 30px;
+}
+.container p {
+  background-color: #c7dcff;
+  border: 5px solid #ffffff;
+  border-radius: 8px;
+  box-shadow: 10px 25px 30px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  max-width: 550px;
+  margin: 30px;
+}
+
+.intro {
+  grid-column: 3 / 6;
+}
+.img1 {
+  grid-column: 1 / 3;
+}
+.img2 {
+  grid-column: 4 / 6;
+}
+.text1 {
+  grid-column: 2 / 5;
+}
+.img3 {
+  grid-column: 1 / 4;
+}
+.text2 {
+  grid-column: 4 / 6;
+}
+.text3 {
+  grid-column: 1 / 3;
+}
+.img4 {
+  grid-column: 3 / 6;
+}

@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img,
+video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+main {
+  margin-left: 200px;
+  padding-top: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+}
+body {
+  background-color: #7aacff;
+}
+
+/* The side navigation menu */
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #9fb0cc;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  overflow: auto;
+  box-shadow: 10px 25px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Sidebar links */
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* Active/current link */
+.sidebar a.active {
+  background-color: #3d5780;
+  color: white;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  background-color: #636e80;
+  color: white;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {
+    float: left;
+  }
+  div.content {
+    margin-left: 0;
+  }
+  main {
+    margin-left: 0;
+  }
+  .first_section {
+    display: flex;
+    align-content: center;
+    flex-direction: column-reverse;
+  }
+  .second_section {
+    flex-direction: column;
+  }
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 500px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+img {
+  border-radius: 8px;
+  box-shadow: 10px 25px 30px rgba(0, 0, 0, 0.3);
+  width: min(40%, 500px);
+  min-width: 200px;
+  align-self: center;
+}
+
+h1 {
+  width: min(80%, 900px);
+}
+
+.first_section {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}
+
+.first_section p {
+  width: min(90%, 500px);
+  min-width: 260px;
+  align-self: center;
+  background-color: #c7dcff;
+  border: 5px solid #ffffff;
+  border-radius: 8px;
+  box-shadow: 10px 25px 30px rgba(0, 0, 0, 0.3);
+  padding: max(3vh, 1rem) 1.5rem;
+}
+
+.background {
+  background-color: #636e80;
+  border-radius: 8px;
+  box-shadow: 10px 25px 30px rgba(0, 0, 0, 0.3);
+  padding: max(3vh, 1rem) 1.5rem;
+  width: min(95%, 1100px);
+  margin-inline: auto;
+}
+.second_section {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.flex-direction-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: white;
+}
